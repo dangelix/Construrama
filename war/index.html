@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html ng-app="app">
 <head>
-  <title>Construrama Casa San Lucas</title>
+  <title>Luminarias León</title>
   <!--Bootstrap-->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -34,6 +34,7 @@
 	<script src="js/controllers/formulaController.js"></script>
 	<script src="js/controllers/emisorController.js"></script>
 	<script src="js/controllers/alertaController.js"></script>
+	<script src="js/controllers/luminariaController.js"></script>
 	<script src="js/controllers/run.js"></script>
 	
  	<script>
@@ -50,23 +51,23 @@
     <div class="container"> 
     
       <div class="navbar-form navbar-left">
-       <h4>Control de Inventario</h4>
+       <h4>Gestión de Luminarias en León Gto.</h4>
      </div>
 <!--      <form action="" class="navbar-form navbar-center" role="search"> -->
 <!--       <button class="glyphicon glyphicon-user form-control navbar-form navbar-right"> Bienvenido ADMINISTRADOR</button>    -->
 <!--     </form>       -->
-<div class="navbar-form navbar-right" ng-show="authenticated">
-	<a href="#/alertas" style="color:#FFFFFF">Alertas de inventario <span class="label label-warning">{{numAlertas}}</span></a>
-</div>
+<!-- <div class="navbar-form navbar-right" ng-show="authenticated">
+	<a href="#/alertas" style="color:#FFFFFF"> <span class="label label-warning">{{numAlertas}}</span></a>
+</div> -->
   </div>
 </section>
 
 <div class="container-fluid" >    
   <div class="row content">
-    <div class="col-sm-2 sidebar text-center" role="navigation" ng-show="authenticated">
+    <div class="col-sm-2 sidebar text-center" role="navigation" >
      <div class="sidebar-nav navbar-collapse">                   
       <ul class="nav" id="side-menu">                        
-        <li><a href="#/ventas"><i class="fa fa-dashboard fa-fw glyphicon glyphicon-shopping-cart col-md-2 text-left"></i>Nueva Venta</a></li>
+        <li><a href="#/ventas"><i class="fa fa-dashboard fa-fw glyphicon glyphicon-shopping-cart col-md-2 text-left"></i>Alta Luminaria</a></li>
         <li class="dropdown"><a data-toggle="collapse" href="#collapse1"><i class="fa fa-dashboard fa-fw glyphicon glyphicon-user col-md-2 text-left"></i> Usuarios<span class="caret"></span></a>
           <div id="collapse1" class="panel-collapse collapse">
           	<ul class="list-group">
@@ -77,16 +78,12 @@
           	</ul>
           </div>
          </li>
-        <li><a href="#/clientes"><i class="fa fa-dashboard fa-fw glyphicon glyphicon-user col-md-2 text-left"></i> Clientes</a></li>
-        <li><a href="#/proveedores"><i class="fa fa-dashboard fa-fw glyphicon glyphicon-user col-md-2 text-left"></i> Provedores</a></li>
-        <li><a href="#/herramientas"><i class="fa fa-dashboard fa-fw glyphicon glyphicon-wrench col-md-2 text-left"></i> Materiales</a></li>
-        <li><a href="#/tornillos"><i class="fa fa-dashboard fa-fw glyphicon glyphicon-compressed col-md-2 text-left"></i> Tornillos</a></li>
-        
-         <li  class="dropdown"><a data-toggle="collapse" href="#collapse2"><i class="fa fa-dashboard fa-fw glyphicon glyphicon-shopping-cart col-md-2 text-left"></i> Ventas<span class="caret"></span></a>
+      
+         <li  class="dropdown"><a data-toggle="collapse" href="#collapse2"><i class="fa fa-dashboard fa-fw glyphicon glyphicon-shopping-cart col-md-2 text-left"></i> Luminarias<span class="caret"></span></a>
          	<div id="collapse2" class="panel-collapse collapse">
           	<ul class="list-group">
-            	<li class="list-group-item"><a href="#/ventas">Nueva Venta</a></li>
-            	<li class="list-group-item"><a href="#/ventasList">Historial de Ventas</a></li>            	
+            	<li class="list-group-item"><a href="#/luminaria">Alta de Luminaria</a></li>
+            	<li class="list-group-item"><a href="#/listaLuminaria">Lista de Luminarias</a></li>            	
           	</ul>
           </div>
          </li>

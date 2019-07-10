@@ -1,0 +1,167 @@
+
+<div class="col-sm-8 text-left">
+	<div id="page-wrapper">
+		<div class="row">
+			<div class="col-lg-12">
+				<h1 class="page-header">Registro de Luminarias</h1>
+			</div>
+			<!-- /.col-lg-12 -->
+		</div>
+		<!-- /.row -->
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="panel panel-default">
+					<div class="panel-heading">Registro de Luminaria</div>
+					<!-- /.panel-heading -->
+					<div class="panel-body">
+						<form id="forma" name="myForm">
+						<div class="col-md-3">
+									<label> Gabinete: </label><select class="form-control" 
+										required>
+										<option></option>
+										<option>Gabinete tipo 1</option>
+										<option>Gabinete tipo 2</option>
+										<option>Gabinete tipo3</option>
+										
+										
+										</select>
+						</div>
+							<div class="col-md-3">
+									<label> Circuito: </label><select class="form-control" 
+										required>
+										<option></option>
+										<option>Circuito tipo 1</option>
+										<option>Circuito tipo 2</option>
+										<option>Circuito tipo3</option>
+										
+										
+										</select>
+						</div>
+						<div class="col-md-3">
+									<label> Luminaria: </label><select class="form-control" ng-model="algo2"
+										required>
+										<option></option>
+										<option ng-value="lum1">Luminaria 1 </option>
+										<option ng-value="lum2">Luminaria 2</option>
+										<option ng-value="lum3">Luminaria 3</option>
+										
+										
+										</select>
+						</div>
+						<div ng-hide="!algo2" ng-show="algo2">
+							<div class="col-md-6">
+								*Folio: {{folio}}<br>
+							</div>
+							<div class="col-md-6">
+								*Colonia: Centro<br>  <br>
+							</div>
+							
+							<div class="col-md-6">
+								Marca: Lumens<br>  <br>
+							</div>
+							<div class="col-md-6">
+								Modelo: 200-AXZ<br>
+								<br>
+							</div>
+							<div class="col-md-6">
+								Potencia: 5000 watts<br> 
+								<br>
+							</div>
+							<div class="col-md-6">
+								Latitud:<br> 19000.45  <br>
+							</div> 
+							<div class="col-md-6">
+								Longitud: 56789993.59<br> <br>
+							</div>
+							<div class="col-md-6">
+								Fecha de instalaci&oacute;n: 11/07/2019<br> <br>
+							</div>
+													
+							<div class="col-md-6">
+								Capacidad: 123222<br>  <br>
+							</div>
+							
+							<br>
+							<button class="btn btn-primary"
+							data-toggle="modal" data-target="#mdlAddMaterial">Lista de Materiales</button>
+						</div>	
+							<br>
+							<div class="col-md-12">
+								<button type="submit" value="Registrar" class="btn btn-primary"
+									ng-click="myForm.$valid && registraLuminaria(newLuminaria)">Registrar</button>
+							</div>
+						</form>
+						<!-- /.table-responsive -->
+					</div>
+					<!-- /.panel-body -->
+				</div>
+				<!-- /.panel -->
+			</div>
+			<!-- /.col-lg-12 -->
+		</div>
+	</div>
+	<div id="mdlAddMaterial" class="modal fade" role="dialog">
+	<div class="modal-dialog">
+
+    <!-- Modal content-->
+    	<div class="modal-content">
+      		<div class="modal-header">
+        		<button type="button" class="close" data-dismiss="modal">&times;</button>
+        		<h4 class="modal-title">Registrar Material</h4>
+      		</div>
+      		<div class="modal-body">
+        		<div class="row">
+        			<div class="col-md-12">
+        				Cantidad: <input class="form-control" ng-model="newMaterial.cantidad">
+        				<BR>
+        			</div>
+        			<div class="col-md-12">
+        				Descripcion: <input class="form-control" ng-model="newMaterial.descripcion">
+        				<BR>
+        			</div>
+        			<div class="col-md-1">
+        				<button class="btn" ng-click="altaMaterial(newMaterial)">Guardar</button>
+        			</div>
+        		</div>
+      		</div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+		      </div>
+    	</div>
+
+  </div>
+</div>
+	
+</div ng-view>
+
+<div id="mdlAddMaterial" class="modal fade" role="dialog">
+	<div class="modal-dialog">
+
+    <!-- Modal content-->
+    	<div class="modal-content">
+      		<div class="modal-header">
+        		<button type="button" class="close" data-dismiss="modal">&times;</button>
+        		h4 class="modal-title">Registrar Material</h4>
+      		</div>
+      		<div class="modal-body">
+        		<div class="row">
+        			<div class="col-md-12">
+        				Cantidad: <input class="form-control" ng-model="newMaterial.cantidad">
+        				<BR>
+        			</div>
+        			<div class="col-md-12">
+        				Descripcion: <input class="form-control" ng-model="newMaterial.descripcion">
+        				<BR>
+        			</div>
+        			<div class="col-md-1">
+        				<button class="btn" ng-click="altaMaterial(newMaterial)">Guardar</button>
+        			</div>
+        		</div>
+      		</div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+		      </div>
+    	</div>
+
+  </div>
+</div>
